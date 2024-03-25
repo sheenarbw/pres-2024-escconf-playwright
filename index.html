@@ -20,8 +20,153 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h2>Links</h2>
+					<ul>
+						<li><a href="https://sheenaoc.com">Sheena's blog</a></li>
+						<li><a href="https://fosstodon.org/@sheena">Mastodon: @sheena@fosstodon.org</a></li>
+						<li><a href="https://twitter.com/sheena_oconnell">X/Twitter: @sheena_oconnell</a></li>
+					</ul>
+					<br/>
+					To navigate this slide deck:
+					Use cursor keys or click on arrows on bottom right.
+					Use Esc key to toggle overview
+					
+				</section>
+				<section><h1>Testing your Python web apps with Playwright</h1></section>
+				<section>
+
+					<h2>
+						Hi, I'm <a href="https://www.linkedin.com/in/sheena-o-connell-0bb72527/"> Sheena </a>
+					  </h2>
+					  
+					  <table>
+						<tr>
+						  <td style="vertical-align: top">
+							<ul>
+							  <li class="fragment">
+									CTO of <a href="http://umuzi.org/">Umuzi</a>
+							  </li>
+							  <li class="fragment">I build effective + efficient remote education systems
+								  <span class="fragment">== tech + people + syllabus + ux + pedagogy</span>
+							  </li>
+							  <li class="fragment">Learned to code around 20 years ago 🍌</li>
+							  <li class="fragment"><a href="https://sheenaoc.com">I write a lot</a></li>
+  
+						  </ul>
+					  </td>
+					  <td width="350" style="vertical-align: middle">
+						  <img
+						  src="images/Me no background.png"
+						  class="avitar"
+						  width="350"
+						  />
+						  <span  class="fragment">🧗‍♀️🏕️🧭🇿🇦🖊️🛠️🔥</span>
+					  </td>
+				  </tr>
+			  </table>
+				</section>
+				<section>
+					<section>
+						<h2>Python + modern web dev</h2>
+					</section>
+
+					<section>
+						<h2>A common pattern</h2>
+						<img src="images/fullstack1.drawio.svg" style="background-color: white; padding-left: 1em; padding-top: 0.5em;"/>
+					</section>
+
+					<section>
+						<h2>Enter HTMX</h2>
+						<img src="images/htmx.png"/>
+					</section>
+
+					<section>
+						<img src="images/alpine_long.svg" style="background-color: white;"/>
+					</section>
+
+					<section>
+						<h2>A new pattern</h2>
+						<img src="images/fullstack2.drawio.svg" style="background-color: white; padding: 0.5em"/>
+					</section>
+
+				</section>
+
+
+				<section>
+					<section>
+						<h2>Demo</h2>
+					</section>
+					<section>
+						<h2>Architecture</h2>
+						<ul>
+							<li>Django</li>
+							<li>HTMX</li>
+							<li>AlpineJS</li>
+							<li>Tailwind</li>
+						</ul>
+					</section>
+					<section>
+						SPA-like functionality is developed in Django code 
+						<br/>
+						We should test it with the rest of our Django code
+					</section>
+				</section>
+
+				
+				<section>
+					<h2>Enter Playwright</h2>
+
+					<ul>
+						<li>Enables reliable end-to-end testing for modern web apps</li>
+						<li>Fire up a browser + interacts with the browser</li>
+						<li>Useful test goodies - expect, trace, screenshot, etc</li>
+						<li>Not just for testing...</li>
+					</ul>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Demo time!</h2>
+					</section>
+					<section>
+						
+
+						<!-- 
+							notes 
+							- here is what you can do 
+							- looks and feels like an SPA, you might think state management, api calls 
+							- really all server side rendered 
+
+							- show backend code:
+								- no api endpoints, all server side rendered
+								- AlpineJS handles the state (not a lot of that)		
+								
+							- tests 
+								- run a server
+								- pytest --headed
+								 pytest --headed --slowmo=2000
+								 pytest --tracing=on 
+								 playwright show-trace test-results/todo-tests-test-todos-py-test-add-new-item-chromium/trace.zip
+								pytest --browser firefox
+
+
+								playwright codegen http://127.0.0.1:8001/
+								pytest  todo/tests/test_todos.py -k test_form_clears_upon_submission
+						-->
+
+
+
+					</section>
+
+
+
+				</section>
+
+				<section>
+					<h2>The end</h2>
+					<img src="images/qr.png"/>
+				</section>
 			</div>
 		</div>
 
