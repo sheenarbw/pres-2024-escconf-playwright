@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Testing your Python web app with Playwright</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -50,7 +50,8 @@
 							  <li class="fragment">I build effective + efficient remote education systems
 								  <span class="fragment">== tech + people + syllabus + ux + pedagogy</span>
 							  </li>
-							  <li class="fragment">Learned to code around 20 years ago 🍌</li>
+							  <li class="fragment">Python is my love language</li>
+							  <!-- <li class="fragment">Learned to code around 20 years ago 🍌</li> -->
 							  <li class="fragment"><a href="https://sheenaoc.com">I write a lot</a></li>
   
 						  </ul>
@@ -66,6 +67,75 @@
 				  </tr>
 			  </table>
 				</section>
+
+
+				<section><h2>Demo</h2></section>
+
+				<section>
+					<section>
+						<h2>Whats in the box?</h2>
+					</section>
+
+					<section>
+						<img src="images/django-logo-positive.png" style="background-color: white; padding: 1em;"/>
+
+					</section>
+
+					<section>
+						<img src="images/htmx-logo.png"/>
+					</section>
+	
+					<section>
+						<pre data-id="code-animation"><code class="hljs html" data-trim data-line-numbers>
+						<button hx-post="/clicked" hx-swap="outerHTML">
+							Click Me
+						</button>
+						</code></pre>
+					</section>
+
+
+					<section>
+						<img src="images/alpine_long.svg" style="background-color: white;"/>
+					</section>
+	
+					<section>
+						<pre data-id="code-animation"><code class="hljs html" data-trim data-line-numbers>
+							<div x-data="{ open: false }">
+								<button @click="open = true">Expand</button>
+							
+								<span x-show="open">
+									Content...
+								</span>
+							</div>
+						</code></pre>
+					</section>
+
+					<section>
+						<img src="images/tailwindcss-logotype/tailwindcss-logotype/tailwindcss-logotype.svg" style="background-color: white; padding: 1em;"/>
+					</section>
+
+					<section>
+						<pre data-id="code-animation"><code class="hljs html" data-trim data-line-numbers>
+							<h1 class="text-3xl font-bold underline">
+								Hello world!
+							</h1>
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Cool!</h2>
+						<ul>
+							<li class="fragment">All the fancy stuff is just HTML with extra attributes</li>
+							<li class="fragment">Server-side rendering (no school like the old school)</li>
+							<li class="fragment">Good DX</li>
+							<li class="fragment">Less resource intensive for devices</li>
+						</ul>
+					</section>
+				</section>
+					
+				
+
+				<!-- 
 				<section>
 					<section>
 						<h2>Python + modern web dev</h2>
@@ -73,94 +143,64 @@
 
 					<section>
 						<h2>A common pattern</h2>
-						<img src="images/fullstack1.drawio.svg" style="background-color: white; padding-left: 1em; padding-top: 0.5em;"/>
+						<img src="images/fullstack1.drawio.svg" style="background-color: white; padding-left: 1em; padding-top: 0.5em;" height="300"/>
 					</section>
 
 					<section>
-						<h2>Enter HTMX</h2>
-						<img src="images/htmx.png"/>
+						<h2>Wouldn't this be nice</h2>
+						<img src="images/fullstack2.drawio.svg" style="background-color: white; padding: 0.5em" height="300"/>
 					</section>
 
-					<section>
-						<img src="images/alpine_long.svg" style="background-color: white;"/>
-					</section>
 
 					<section>
-						<h2>A new pattern</h2>
-						<img src="images/fullstack2.drawio.svg" style="background-color: white; padding: 0.5em"/>
-					</section>
-
-				</section>
-
-
-				<section>
-					<section>
-						<h2>Demo</h2>
-					</section>
-					<section>
-						<h2>Architecture</h2>
+						<h2>Python + HTMX + Alpine.js</h2>
 						<ul>
-							<li>Django</li>
-							<li>HTMX</li>
-							<li>AlpineJS</li>
-							<li>Tailwind</li>
+							<li>Simplified stack => fast development, great DX</li>
+							<li>Modern frontend</li>
+							<li>Server side rendering</li>
 						</ul>
-					</section>
-					<section>
-						SPA-like functionality is developed in Django code 
-						<br/>
-						We should test it with the rest of our Django code
-					</section>
+					</section> 
+					
 				</section>
-
+			-->
+				
+				
+				
 				
 				<section>
-					<h2>Enter Playwright</h2>
+					<section>
+						<h2>Testing</h2>
+						<span class="fragment">Standard unit testing insufficient</span><br/>
+						<span class="fragment">(but you should still write some unit tests)</span>
+						 
 
-					<ul>
-						<li>Enables reliable end-to-end testing for modern web apps</li>
-						<li>Fire up a browser + interacts with the browser</li>
-						<li>Useful test goodies - expect, trace, screenshot, etc</li>
-						<li>Not just for testing...</li>
-					</ul>
+					</section>
+	
+					
+					<section>
+
+						<h2>Enter Playwright</h2>
+						
+						<ul>
+							<li class="fragment">Enables reliable end-to-end testing for modern web apps</li>
+							<li class="fragment">Fire up a browser + interacts with the browser</li>
+							<li class="fragment">Useful test goodies - expect, trace, screenshot, etc</li>
+							<li class="fragment">Has uses beyond testing</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Playwright versus ____</h2>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/Ze62p97coaY?si=_uGGIofEJLcwdTTC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+						Keynote: Testing Modern Web Apps Like a Champion with Andrew Knight
+
+					</section>
 				</section>
 				
 				<section>
 					<section>
 						<h2>Demo time!</h2>
 					</section>
-					<section>
-						
-
-						<!-- 
-							notes 
-							- here is what you can do 
-							- looks and feels like an SPA, you might think state management, api calls 
-							- really all server side rendered 
-
-							- show backend code:
-								- no api endpoints, all server side rendered
-								- AlpineJS handles the state (not a lot of that)		
-								
-							- tests 
-								- run a server
-								- pytest --headed
-								 pytest --headed --slowmo=2000
-								 pytest --tracing=on 
-								 playwright show-trace test-results/todo-tests-test-todos-py-test-add-new-item-chromium/trace.zip
-								pytest --browser firefox
-
-
-								playwright codegen http://127.0.0.1:8001/
-								pytest  todo/tests/test_todos.py -k test_form_clears_upon_submission
-						-->
-
-
-
-					</section>
-
-
-
 				</section>
 
 				<section>

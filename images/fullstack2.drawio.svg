@@ -1,4 +1,4 @@
-<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="211px" height="61px" viewBox="-0.5 -0.5 211 61" content="&lt;mxfile&gt;&lt;diagram id=&quot;_QOUHF7avrdFhsrSlc78&quot; name=&quot;Page-1&quot;&gt;jZI7b4QwDIB/TdYKgo721tK769KJoXNEXBIpEJQLB/TX1zQOD6FKnWJ/fsY2y4pmvDnRqQ8rwTCeyJFlb4zzNDmf8JnJFMgpzQOonZbktIJSf0OMJNprCfedo7fWeN3tYWXbFiq/Y8I5O+zdvqzZV+1EDQdQVsIc6aeWXgX6wp9X/g66VrFymp+DpRHRmX5yV0LaYYOyC8sKZ60PUjMWYObhxbmEuOsf1qUxB63/TwAPAQ9hevpbCe4Bbm4NZ4wPZpLgdFs/Ucd+imNwtkfbnClh2eugtIeyE9VsHXDxyJRvDGopisfOqFms5mHcIOr0BrYB7yZ0ida4fzobnpA+rEtYbkRtFpATE7T3ekm9jgYFmk5U1y382ja3nF1+AA==&lt;/diagram&gt;&lt;/mxfile&gt;">
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="211px" height="61px" viewBox="-0.5 -0.5 211 61" content="&lt;mxfile&gt;&lt;diagram id=&quot;_QOUHF7avrdFhsrSlc78&quot; name=&quot;Page-1&quot;&gt;jZI9b4QwDIZ/DTsQid6tpde7pVIlhs4RcUmkQFAwB/TXNxCHD6FKXcB+bCfOa0csr8e75a38MAJ0lMZijNhblKYJu2TuN5PJE3ZlHlRWCUraQKF+gGBMtFcCukMiGqNRtUdYmqaBEg+MW2uGY9q30cdbW17BCRQl12f6pQRKTy/py8YfoCoZbk6yq4/UPCTTSzrJhRl2iN0illtj0Fv1mIOexQu6+Lr3P6JrYxYa/E9B6gueXPf0ts8JpWlmoZZElLB8VVN11DJOQQdr+kbAfFQcsddBKoSi5eUcHdzkHZNYa+clzjy3Rt0+wSKMO0St3sHUgHZyKSEaFoD2Jo3JH7YprEsidxPIiHEafLUevWnjDJInuNsYlthumdntFw==&lt;/diagram&gt;&lt;/mxfile&gt;">
     <defs/>
     <g>
         <rect x="0" y="0" width="210" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
@@ -8,13 +8,13 @@
                     <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 208px; height: 1px; padding-top: 30px; margin-left: 1px;">
                         <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                             <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
-                                Server side rendering.
+                                Python all the things
                             </div>
                         </div>
                     </div>
                 </foreignObject>
                 <text x="105" y="34" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
-                    Server side rendering.
+                    Python all the things
                 </text>
             </switch>
         </g>
