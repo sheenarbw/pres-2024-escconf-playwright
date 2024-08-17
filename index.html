@@ -1,260 +1,331 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Testing your Python web app with Playwright</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+	<title>Testing your Python web app with Playwright</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black-contrast.css">
 
-		<!-- Umuzi theme things -->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-		<link rel="stylesheet" href="umuzi-branding/theme.css"/>
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
 
-		<!-- <style>
+	<!-- Umuzi theme things -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+	<!-- <link rel="stylesheet" href="sheena-branding/theme.css" /> -->
+
+	<!-- <style>
 			body {
 				background-image: url("images/qr2.png");
 				background-repeat: no-repeat !important;
 				background-position: right top;
 			}
 		</style> -->
-	</head>
-	<body>
-		<div
-		style="position: absolute; bottom:0.5em; font-size:2em ; text-align: left; width: 100%; color: lightgray; padding-left: 0.5em;"
-		>
+</head>
+
+<body>
+	<div
+		style="position: absolute; bottom:0.5em; font-size:2em ; text-align: left; width: 100%; color: lightgray; padding-left: 0.5em;">
 
 
-		@sheena@fosstodon.org | https://sheenaoc.com
-			<!-- <img src="images/qr2.png" height="500em"/> -->
-		</div>
-		<div class="reveal">
-			<div class="slides">
+		@sheena@fosstodon.org | https://sheenaoc.com | x: @sheena_oconnell
+		<!-- <img src="images/qr2.png" height="500em"/> -->
+	</div>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Links</h2>
+				<ul>
+					<li><a href="https://github.com/sheenarbw/demo-testing-django-with-playwright">Demo app</a></li>
+					<li><a href="https://sheenaoc.com">Sheena's blog</a></li>
+					<li><a href="https://fosstodon.org/@sheena">Mastodon: @sheena@fosstodon.org</a></li>
+					<li><a href="https://twitter.com/sheena_oconnell">X/Twitter: @sheena_oconnell</a></li>
+				</ul>
+				<br />
+				To navigate this slide deck:
+				Use cursor keys or click on arrows on bottom right.
+				Use Esc key to toggle overview
+
+			</section>
+			<section>
+				<h1>Testing Python web apps using Playwright</h1>
+				<img src="images/qr.png" height="200em" />
+			</section>
+
+			<section>
+
 				<section>
-					<h2>Links</h2>
-					<ul>
-						<li><a href="https://github.com/sheenarbw/demo-testing-django-with-playwright">Demo app</a></li>
-						<li><a href="https://sheenaoc.com">Sheena's blog</a></li>
-						<li><a href="https://fosstodon.org/@sheena">Mastodon: @sheena@fosstodon.org</a></li>
-						<li><a href="https://twitter.com/sheena_oconnell">X/Twitter: @sheena_oconnell</a></li>
-					</ul>
-					<br/>
-					To navigate this slide deck:
-					Use cursor keys or click on arrows on bottom right.
-					Use Esc key to toggle overview
-					
-				</section>
-				<section><h1>Testing your Python web apps with Playwright</h1>
-				<img src="images/qr.png" height="200em"/>
-				</section>
-				<section
-					style="background-image: url('images/qr.png'); background-repeat: no-repeat; background-position: right top; background-size: 3em;"
-				>
 
 					<!-- <img src="images/qr.png" style="position: absolute;"/> -->
 
 					<h2>
 						Hi, I'm <a href="https://www.linkedin.com/in/sheena-o-connell-0bb72527/"> Sheena </a>
-					  </h2>
-					  
-					  <table>
+					</h2>
+					🧗‍♀️🏕️🧭🇿🇦🖊️🛠️🔥🐕🎸
+
+					<table>
 						<tr>
-						  <td style="vertical-align: top">
-							<ul>
-							  <li class="fragment">
-									CTO of <a href="http://umuzi.org/">Umuzi</a>
-							  </li>
-							  <li class="fragment">I build effective + efficient remote education systems
-								  <span class="fragment">== tech + people + syllabus + ux + pedagogy</span>
-							  </li>
-							  <li class="fragment">Python is my love language</li>
-							  <!-- <li class="fragment">Learned to code around 20 years ago 🍌</li> -->
-							  <li class="fragment"><a href="https://sheenaoc.com">I write a lot</a></li>
-  
-						  </ul>
-					  </td>
-					  <td width="350" style="vertical-align: middle">
-						  <img
-						  src="images/Me no background.png"
-						  class="avitar"
-						  width="350"
-						  />
-						  <span  class="fragment">🧗‍♀️🏕️🧭🇿🇦🖊️🛠️🔥</span>
-					  </td>
-				  </tr>
-			  </table>
+							<td style="vertical-align: top">
+								<ul>
+									<li class="fragment">Coding since young teen</li>
+									<li class="fragment">Worked in a lot of startups</li>
+									<li class="fragment">
+										Most recently: CTO of Umuzi
+										<ul>
+											<li class="fragment">Science of learning => Engineering of learning</li>
+											<li class="fragment">Building the stuff</li>
+											<li class="fragment">Human processes (various)
+											</li>
+										</ul>
+									</li>
+								</ul>
+
+
+
+							</td>
+							<td width="350" style="vertical-align: middle">
+								<img src="images/Me no background.png" class="avitar" width="350" /><br />
+
+							</td>
+						</tr>
+					</table>
 				</section>
 
+				<section>
+
+					<h2>
+						And now?
+					</h2>
+
+					<!-- <span class="fragment">Still in tech-ed + ed-tech ;)</span><br /> -->
+
+					<span class="fragment">Building tools/systems to help tech educators with their trickiest
+						problems</span>
+
+				</section>
+			</section>
+
+			<section>
+				<h2>Onwards to glory!</h2>
+				We are here to talk about testing, right?
+			</section>
+
+			<section>
+				<h2>What are we testing?</h2>
+
+			</section>
+
+
+			<section>
+				<h2>Whats in the box?</h2>
+			</section>
+
+			<section>
+
+				<section>
+					<img src="images/django-logo-positive.png" style="background-color: white; padding: 1em;" />
+				</section>
+
+				<section>
+					<h3>Django ==</h3>
+					<ul>
+						<li class="fragment">Framework for perfectionists with deadlines</li>
+						<li class="fragment">Rock solid</li>
+						<li class="fragment">Fantastic open source community</li>
+						<li class="fragment">ORM at the core</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>ORM ==</h3>
+					<ul>
+						<li class="fragment">Object Relational Mapper</li>
+						<li class="fragment">Use classes to represent database tables</li>
+						<li class="fragment">Use instance of class to represent row in table</li>
+					</ul>
+				</section>
+
+			</section>
+
+			<section>
+
+				<section>
+					<img src="images/htmx-logo.png" />
+				</section>
+
+				<section>
+					"htmx gives you access to AJAX, CSS Transitions, WebSockets and Server Sent Events directly in HTML,
+					using attributes, so
+					you can build modern user interfaces with the simplicity and power of hypertext"
+				</section>
+
+				<section>
+					<pre data-id="code-animation"><code class="hljs html" data-trim data-line-numbers>
+									<button hx-post="/clicked" hx-swap="outerHTML">
+										Click Me
+									</button>
+									</code></pre>
+				</section>
+
+				<section>
+
+					<pre data-id="code-animation"><code class="hljs html" data-trim data-line-numbers>
+			
+									<form 
+									hx-post="/action_add_new_todo" 
+									hx-target="#todo_items" 
+									hx-swap="beforeend">
+									
+										Title* <input type="text" name="title">
+									
+										<input type="submit" value="Add">
+									
+									</form>
+			
+			</code></pre>
+
+
+				</section>
+
+
+			</section>
+
+			<section>
+				<section>
+					<img src="images/alpine_long.svg" style="background-color: white;" />
+				</section>
+
+				<section>
+					<pre data-id="code-animation"><code class="hljs html" data-trim data-line-numbers>
+										<div x-data="{ open: false }">
+											<button @click="open = true">Expand</button>
+										
+											<span x-show="open">
+												Content...
+											</span>
+										</div>
+									</code></pre>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<img src="images/tailwindcss-logotype/tailwindcss-logotype/tailwindcss-logotype.svg"
+						style="background-color: white; padding: 1em;" />
+				</section>
+
+				<section>
+					<pre data-id="code-animation"><code class="hljs html" data-trim data-line-numbers>
+										<h1 class="text-3xl font-bold underline">
+											Hello world!
+										</h1>
+									</code></pre>
+				</section>
+
+
+			</section>
+
+
+			<section>
+				<section>
+					<h2> To be clear</h2>
+					<ul>
+						<li>HTMX is not a Python/Django thing</li>
+						<li>AlpineJs is not a Python/Django thing</li>
+						<li>Tailwind is not a Python/Django thing</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Watch this! It's awesome</h2>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/3GObi93tjZI?si=K-dGG80jq4eOiAIB"
+						title="YouTube video player" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
+					DjangoCon 2022 | From React to htmx on a real-world SaaS product: we did it, and it's awesome!
+
+				</section>
+
+			</section>
+
+			<section>
+				<h2>Stack for SPA using Django backend</h2>
+				<img src="images/fullstack1.drawio.svg"
+					style="background-color: white; padding-left: 0.5em; padding-top: 0.5em;" />
+			</section>
+
+			<section>
+				<h2>HTMX based stack</h2>
+				<img src="images/fullstack2.drawio.svg"
+					style="background-color: white; padding-left: 0.5em; padding-top: 0.5em; padding-right: 0.5em;" />
+			</section>
+
+			<section>
+				<section>
+					<h2>Testing</h2>
+					<span class="fragment">Standard unit testing insufficient</span><br />
+					<span class="fragment">(but you should still write some unit tests)</span>
+
+
+				</section>
+
+
+				<section>
+
+					<h2>Enter Playwright</h2>
+
+					<ul>
+						<li class="fragment">Enables reliable end-to-end testing for modern web apps</li>
+						<li class="fragment">Fire up a browser + interacts with the browser</li>
+						<li class="fragment">Useful test goodies - expect, trace, screenshot, etc</li>
+						<li class="fragment">Has uses beyond testing</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Playwright versus ____</h2>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/Ze62p97coaY?si=_uGGIofEJLcwdTTC"
+						title="YouTube video player" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+					Keynote: Testing Modern Web Apps Like a Champion with Andrew Knight
+
+				</section>
+			</section>
+
+			<section>
 				<section>
 					<h2>Demo</h2>
-					UI 
+					The moment you have all been waiting for
 				</section>
+			</section>
 
-
-				<section>
-					<section>
-						<h2>Whats in the box?</h2>
-					</section>
-
-					<section>
-						<img src="images/django-logo-positive.png" style="background-color: white; padding: 1em;"/>
-
-					</section>
-
-					<section>
-						<img src="images/htmx-logo.png"/>
-					</section>
-	
-					<section>
-						<pre data-id="code-animation"><code class="hljs html" data-trim data-line-numbers>
-						<button hx-post="/clicked" hx-swap="outerHTML">
-							Click Me
-						</button>
-						</code></pre>
-					</section>
-
-
-					<section>
-						<img src="images/alpine_long.svg" style="background-color: white;"/>
-					</section>
-	
-					<section>
-						<pre data-id="code-animation"><code class="hljs html" data-trim data-line-numbers>
-							<div x-data="{ open: false }">
-								<button @click="open = true">Expand</button>
-							
-								<span x-show="open">
-									Content...
-								</span>
-							</div>
-						</code></pre>
-					</section>
-
-					<section>
-						<img src="images/tailwindcss-logotype/tailwindcss-logotype/tailwindcss-logotype.svg" style="background-color: white; padding: 1em;"/>
-					</section>
-
-					<section>
-						<pre data-id="code-animation"><code class="hljs html" data-trim data-line-numbers>
-							<h1 class="text-3xl font-bold underline">
-								Hello world!
-							</h1>
-						</code></pre>
-					</section>
-
-					<!-- <section>
-						<h2>Cool!</h2>
-						<ul>
-							<li class="fragment">All the fancy stuff is just HTML with extra attributes</li>
-							<li class="fragment">Server-side rendering (no school like the old school)</li>
-							<li class="fragment">No need for heavy frontend framework</li>
-							<!-- <li class="fragment">No need for APIs</li> 
-							<li class="fragment">Good DX</li>
-							<li class="fragment">Light on resources</li>
-							
-						</ul>
-					</section> -->
-				</section>
-					
-				<section><h2>Demo</h2> Network</section>
-				
-
-				<!-- 
-				<section>
-					<section>
-						<h2>Python + modern web dev</h2>
-					</section>
-
-					<section>
-						<h2>A common pattern</h2>
-						<img src="images/fullstack1.drawio.svg" style="background-color: white; padding-left: 1em; padding-top: 0.5em;" height="300"/>
-					</section>
-
-					<section>
-						<h2>Wouldn't this be nice</h2>
-						<img src="images/fullstack2.drawio.svg" style="background-color: white; padding: 0.5em" height="300"/>
-					</section>
-
-
-					<section>
-						<h2>Python + HTMX + Alpine.js</h2>
-						<ul>
-							<li>Simplified stack => fast development, great DX</li>
-							<li>Modern frontend</li>
-							<li>Server side rendering</li>
-						</ul>
-					</section> 
-					
-				</section>
-			-->
-				
-				
-				
-				
-				<section>
-					<section>
-						<h2>Testing</h2>
-						<span class="fragment">Standard unit testing insufficient</span><br/>
-						<span class="fragment">(but you should still write some unit tests)</span>
-						 
-
-					</section>
-	
-					
-					<section>
-
-						<h2>Enter Playwright</h2>
-						
-						<ul>
-							<li class="fragment">Enables reliable end-to-end testing for modern web apps</li>
-							<li class="fragment">Fire up a browser + interacts with the browser</li>
-							<li class="fragment">Useful test goodies - expect, trace, screenshot, etc</li>
-							<li class="fragment">Has uses beyond testing</li>
-						</ul>
-					</section>
-
-					<section>
-						<h2>Playwright versus ____</h2>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/Ze62p97coaY?si=_uGGIofEJLcwdTTC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
-						Keynote: Testing Modern Web Apps Like a Champion with Andrew Knight
-
-					</section>
-				</section>
-				
-				<section>
-					<section>
-						<h2>Demo</h2>
-						The moment you have all been waiting for
-					</section>
-				</section>
-
-				<section>
-					<h2>The end</h2>
-					<img src="images/qr.png"/>
-				</section>
-			</div>
+			<section>
+				<h2>The end</h2>
+				<img src="images/qr.png" />
+			</section>
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
 </html>
